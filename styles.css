@@ -1,0 +1,104 @@
+/* FMC Website - Global Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Navbar */
+.navbar { background: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+
+/* Logo */
+.logo { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+.logo-icon { width: 50px; height: 50px; }
+.logo-text h1 { color: #A52A5A; font-size: 28px; margin-bottom: -5px; font-weight: 700; letter-spacing: 2px; }
+.logo-text p { font-size: 10px; color: #666; letter-spacing: 1px; text-transform: uppercase; }
+
+/* Navigation */
+.nav-menu { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-link { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; padding: 8px 16px; border-radius: 5px; }
+.nav-link:hover { color: #A52A5A; background: #f8f8f8; }
+.nav-link.active { color: #fff; background: #A52A5A; }
+.contact-btn { background: #A52A5A; color: #fff; padding: 10px 25px; border-radius: 5px; }
+.contact-btn:hover { background: #8B1F4A; }
+
+/* Page Content */
+.page-content { flex: 1; }
+.hero { background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); padding: 100px 0; text-align: center; }
+.hero h1 { font-size: 56px; color: #2C2C2C; margin-bottom: 20px; font-weight: 700; }
+.hero .subtitle { font-size: 22px; color: #666; margin-bottom: 40px; }
+.cta-button { display: inline-block; background: #A52A5A; color: #fff; padding: 18px 45px; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s; }
+.cta-button:hover { background: #8B1F4A; transform: translateY(-2px); }
+
+.section { padding: 80px 0; }
+.section h2 { font-size: 42px; text-align: center; margin-bottom: 20px; font-weight: 700; }
+.section-subtitle { text-align: center; font-size: 18px; color: #666; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; }
+.content-box { max-width: 900px; margin: 0 auto; text-align: center; }
+.content-box p { font-size: 18px; color: #666; margin-bottom: 25px; line-height: 1.8; }
+
+/* Services Grid */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+.service-card { background: #f8f8f8; padding: 40px 30px; border-radius: 10px; text-align: center; transition: all 0.3s; }
+.service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+.service-icon { font-size: 48px; margin-bottom: 20px; }
+.service-card h3 { font-size: 22px; color: #2C2C2C; margin-bottom: 15px; }
+.service-card p { font-size: 15px; color: #666; }
+
+/* Values Grid */
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+.value-card { padding: 40px 30px; background: #fff; border-radius: 10px; border-left: 5px solid #A52A5A; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+.value-number { font-size: 56px; font-weight: 700; color: #A52A5A; opacity: 0.2; }
+.value-card h3 { font-size: 22px; margin: 15px 0; }
+.value-card p { font-size: 15px; color: #666; line-height: 1.7; }
+
+/* Pricing Grid */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+.pricing-card { background: #fff; padding: 50px 40px; border-radius: 10px; text-align: center; border: 2px solid #ddd; transition: all 0.3s; position: relative; }
+.pricing-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+.pricing-card.featured { background: #A52A5A; color: #fff; border-color: #A52A5A; }
+.popular-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #8B1F4A; color: #fff; padding: 5px 20px; border-radius: 20px; font-size: 13px; }
+.price-tag { font-size: 36px; font-weight: 700; margin: 25px 0; color: #A52A5A; }
+.pricing-card.featured .price-tag { color: #fff; }
+.pricing-features { list-style: none; margin: 30px 0; text-align: left; }
+.pricing-features li { padding: 12px 0; border-bottom: 1px solid #eee; color: #666; padding-left: 25px; position: relative; }
+.pricing-features li::before { content: "\2713"; position: absolute; left: 0; color: #A52A5A; font-weight: bold; }
+.pricing-card.featured .pricing-features li { border-bottom-color: rgba(255,255,255,0.3); color: #fff; }
+.pricing-card.featured .pricing-features li::before { color: #fff; }
+.pricing-btn { display: inline-block; padding: 15px 45px; background: #A52A5A; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: all 0.3s; }
+.pricing-btn:hover { background: #8B1F4A; }
+.pricing-card.featured .pricing-btn { background: #fff; color: #A52A5A; }
+
+/* Contact Form */
+.contact-wrapper { max-width: 600px; margin: 50px auto; background: #f8f8f8; padding: 50px; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.contact-info { text-align: center; margin-bottom: 40px; }
+.contact-info h3 { font-size: 24px; margin-bottom: 15px; }
+.contact-info p { color: #666; margin-bottom: 10px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 5px; font-family: 'Poppins', sans-serif; font-size: 15px; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: #A52A5A; }
+.submit-btn { width: 100%; padding: 18px; background: #A52A5A; color: #fff; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-size: 16px; }
+.submit-btn:hover { background: #8B1F4A; }
+
+/* Footer */
+.footer { background: #2C2C2C; color: #fff; padding: 40px 0; text-align: center; margin-top: auto; }
+.footer-logo-section { margin-bottom: 20px; }
+.footer-logo-section svg { width: 50px; height: 50px; margin: 0 auto 15px; display: block; }
+.footer-links { margin: 20px 0; }
+.footer-links a { color: #fff; text-decoration: none; margin: 0 15px; opacity: 0.8; transition: opacity 0.3s; }
+.footer-links a:hover { opacity: 1; }
+
+/* Utility classes */
+.bg-light { background: #f8f8f8; }
+.text-left { text-align: left; }
+.mt-30 { margin-top: 30px; }
+.mt-40 { margin-top: 40px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-700 { max-width: 700px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid, .values-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 36px; }
+    .nav-menu { gap: 15px; }
+    .nav-link { padding: 6px 12px; font-size: 14px; }
+    .section h2 { font-size: 32px; }
+    .contact-wrapper { padding: 30px 20px; margin: 30px 15px; }
+}
