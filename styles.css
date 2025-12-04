@@ -10,24 +10,24 @@ body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; min-he
 /* Logo */
 .logo { display: flex; align-items: center; gap: 15px; text-decoration: none; }
 .logo-icon { width: 50px; height: 50px; }
-.logo-text h1 { color: #A52A5A; font-size: 28px; margin-bottom: -5px; font-weight: 700; letter-spacing: 2px; }
+.logo-text h1 { color: #1E5AA8; font-size: 28px; margin-bottom: -5px; font-weight: 700; letter-spacing: 2px; }
 .logo-text p { font-size: 10px; color: #666; letter-spacing: 1px; text-transform: uppercase; }
 
 /* Navigation */
 .nav-menu { display: flex; list-style: none; gap: 30px; align-items: center; }
 .nav-link { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; padding: 8px 16px; border-radius: 5px; }
-.nav-link:hover { color: #A52A5A; background: #f8f8f8; }
-.nav-link.active { color: #fff; background: #A52A5A; }
-.contact-btn { background: #A52A5A; color: #fff; padding: 10px 25px; border-radius: 5px; }
-.contact-btn:hover { background: #8B1F4A; }
+.nav-link:hover { color: #1E5AA8; background: #f8f8f8; }
+.nav-link.active { color: #fff; background: #1E5AA8; }
+.contact-btn { background: #1E5AA8; color: #fff; padding: 10px 25px; border-radius: 5px; }
+.contact-btn:hover { background: #164785; }
 
 /* Page Content */
 .page-content { flex: 1; }
 .hero { background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); padding: 100px 0; text-align: center; }
 .hero h1 { font-size: 56px; color: #2C2C2C; margin-bottom: 20px; font-weight: 700; }
 .hero .subtitle { font-size: 22px; color: #666; margin-bottom: 40px; }
-.cta-button { display: inline-block; background: #A52A5A; color: #fff; padding: 18px 45px; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s; }
-.cta-button:hover { background: #8B1F4A; transform: translateY(-2px); }
+.cta-button { display: inline-block; background: #1E5AA8; color: #fff; padding: 18px 45px; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s; }
+.cta-button:hover { background: #164785; transform: translateY(-2px); }
 
 .section { padding: 80px 0; }
 .section h2 { font-size: 42px; text-align: center; margin-bottom: 20px; font-weight: 700; }
@@ -45,8 +45,8 @@ body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; min-he
 
 /* Values Grid */
 .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
-.value-card { padding: 40px 30px; background: #fff; border-radius: 10px; border-left: 5px solid #A52A5A; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
-.value-number { font-size: 56px; font-weight: 700; color: #A52A5A; opacity: 0.2; }
+.value-card { padding: 40px 30px; background: #fff; border-radius: 10px; border-left: 5px solid #1E5AA8; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+.value-number { font-size: 56px; font-weight: 700; color: #1E5AA8; opacity: 0.2; }
 .value-card h3 { font-size: 22px; margin: 15px 0; }
 .value-card p { font-size: 15px; color: #666; line-height: 1.7; }
 
@@ -54,18 +54,18 @@ body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; min-he
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
 .pricing-card { background: #fff; padding: 50px 40px; border-radius: 10px; text-align: center; border: 2px solid #ddd; transition: all 0.3s; position: relative; }
 .pricing-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-.pricing-card.featured { background: #A52A5A; color: #fff; border-color: #A52A5A; }
-.popular-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #8B1F4A; color: #fff; padding: 5px 20px; border-radius: 20px; font-size: 13px; }
-.price-tag { font-size: 36px; font-weight: 700; margin: 25px 0; color: #A52A5A; }
+.pricing-card.featured { background: #1E5AA8; color: #fff; border-color: #1E5AA8; }
+.popular-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #164785; color: #fff; padding: 5px 20px; border-radius: 20px; font-size: 13px; }
+.price-tag { font-size: 36px; font-weight: 700; margin: 25px 0; color: #1E5AA8; }
 .pricing-card.featured .price-tag { color: #fff; }
 .pricing-features { list-style: none; margin: 30px 0; text-align: left; }
 .pricing-features li { padding: 12px 0; border-bottom: 1px solid #eee; color: #666; padding-left: 25px; position: relative; }
-.pricing-features li::before { content: "\2713"; position: absolute; left: 0; color: #A52A5A; font-weight: bold; }
+.pricing-features li::before { content: "\2713"; position: absolute; left: 0; color: #1E5AA8; font-weight: bold; }
 .pricing-card.featured .pricing-features li { border-bottom-color: rgba(255,255,255,0.3); color: #fff; }
 .pricing-card.featured .pricing-features li::before { color: #fff; }
-.pricing-btn { display: inline-block; padding: 15px 45px; background: #A52A5A; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: all 0.3s; }
-.pricing-btn:hover { background: #8B1F4A; }
-.pricing-card.featured .pricing-btn { background: #fff; color: #A52A5A; }
+.pricing-btn { display: inline-block; padding: 15px 45px; background: #1E5AA8; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: all 0.3s; }
+.pricing-btn:hover { background: #164785; }
+.pricing-card.featured .pricing-btn { background: #fff; color: #1E5AA8; }
 
 /* Contact Form */
 .contact-wrapper { max-width: 600px; margin: 50px auto; background: #f8f8f8; padding: 50px; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
@@ -73,9 +73,9 @@ body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; min-he
 .contact-info h3 { font-size: 24px; margin-bottom: 15px; }
 .contact-info p { color: #666; margin-bottom: 10px; }
 .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #ddd; border-radius: 5px; font-family: 'Poppins', sans-serif; font-size: 15px; }
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: #A52A5A; }
-.submit-btn { width: 100%; padding: 18px; background: #A52A5A; color: #fff; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-size: 16px; }
-.submit-btn:hover { background: #8B1F4A; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: #1E5AA8; }
+.submit-btn { width: 100%; padding: 18px; background: #1E5AA8; color: #fff; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-size: 16px; }
+.submit-btn:hover { background: #164785; }
 
 /* Footer */
 .footer { background: #2C2C2C; color: #fff; padding: 40px 0; text-align: center; margin-top: auto; }
