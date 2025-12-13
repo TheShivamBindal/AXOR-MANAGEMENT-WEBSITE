@@ -51,14 +51,55 @@
                         <p><strong>Email:</strong> info@axorc.ca</p>
                         <p><strong>Location:</strong> Toronto, Canada</p>
                     </div>
-                    <form class="contact-form" onsubmit="alert('Thank you for your message! We will contact you soon.'); this.reset(); return false;">
-                        <input type="text" placeholder="Your Name *" required>
-                        <input type="email" placeholder="Your Email *" required>
-                        <input type="text" placeholder="Organization">
-                        <input type="tel" placeholder="Phone Number">
-                        <textarea placeholder="Please describe your requirements, scope, timeline, and areas of focus *" rows="6" required></textarea>
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                        <input type="hidden" name="access_key" value="3077baa0-55a7-42de-aeb3-91a9afb3e3e6">
+                        <input type="hidden" name="subject" value="New Contact Form Submission - AXOR Consulting">
+                        <input type="text" name="name" placeholder="Your Name *" required>
+                        <input type="email" name="email" placeholder="Your Email *" required>
+                        <input type="text" name="organization" placeholder="Organization">
+                        <input type="tel" name="phone" placeholder="Phone Number">
+                        <textarea name="message" placeholder="Please describe your requirements, scope, timeline, and areas of focus *" rows="6" required></textarea>
                         <button type="submit" class="submit-btn">Send Message</button>
+                        <div id="form-status" style="margin-top: 15px; padding: 15px; border-radius: 8px; display: none;"></div>
                     </form>
+                    <script>
+                        const form = document.getElementById('contact-form');
+                        const status = document.getElementById('form-status');
+
+                        form.addEventListener('submit', async function(e) {
+                            e.preventDefault();
+                            const submitBtn = form.querySelector('.submit-btn');
+                            submitBtn.disabled = true;
+                            submitBtn.textContent = 'Sending...';
+
+                            try {
+                                const response = await fetch(form.action, {
+                                    method: 'POST',
+                                    body: new FormData(form),
+                                    headers: { 'Accept': 'application/json' }
+                                });
+
+                                const data = await response.json();
+                                if (data.success) {
+                                    status.style.display = 'block';
+                                    status.style.background = '#d4edda';
+                                    status.style.color = '#155724';
+                                    status.innerHTML = '<strong>Thank you!</strong> Your message has been sent. We will contact you soon.';
+                                    form.reset();
+                                } else {
+                                    throw new Error('Form submission failed');
+                                }
+                            } catch (error) {
+                                status.style.display = 'block';
+                                status.style.background = '#f8d7da';
+                                status.style.color = '#721c24';
+                                status.innerHTML = '<strong>Oops!</strong> Something went wrong. Please try again or email us directly at info@axorc.ca';
+                            }
+
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Send Message';
+                        });
+                    </script>
                 </div>
             </div>
         </section>
